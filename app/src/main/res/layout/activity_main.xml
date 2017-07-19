@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="ma.dradeb.hiddenfounders.Activities.MainActivity">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/proceed"
+        android:layout_marginTop="10dp"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        android:background="@drawable/com_facebook_button_login_background"
+        android:layout_below="@id/login"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ma.dradeb.hiddenfounders.CustomViews.RobotoTextViewRegular
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:layout_margin="10dp"
+            android:text="delete photos after upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:layout_margin="10dp"
+            android:id="@+id/delete_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

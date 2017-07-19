@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ma.dradeb.hiddenfounders.Activities.PhotosActivity">
+    <LinearLayout
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/custommenu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ma.dradeb.hiddenfounders.CustomViews.RobotoTextViewRegular
+            android:text="Select images to download"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/done"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/checkred"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <GridView
+        android:layout_below="@+id/custommenu"
+        android:id="@+id/photos_container"
+        android:layout_above="@+id/pagination"
+        android:numColumns="3"
+        android:layout_margin="2dp"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
+
+
+    <!--NOT A GOOD IDEA -->
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/imagespager"-->
+        <!--android:layout_above="@+id/pagination"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+    <!--</android.support.v4.view.ViewPager>-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/pagination"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/prevbutton"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Previous"
+            android:drawableLeft="@drawable/prev"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <ma.dradeb.hiddenfounders.CustomViews.RobotoTextViewRegular
+            android:id="@+id/photo_counter"
+            android:text="20/131"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <Button
+            android:id="@+id/nextbutton"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="next"
+            android:drawableRight="@drawable/next"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

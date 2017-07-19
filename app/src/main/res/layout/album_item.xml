@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/album_cover"
+                android:src="@drawable/hf"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:rotation="180"
+                android:background="@drawable/gradient_black"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <ImageView
+                android:background="@drawable/gradient_black"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <ma.dradeb.hiddenfounders.CustomViews.RobotoTextViewThin
+                android:text="2017-11-02"
+                android:id="@+id/album_date"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ma.dradeb.hiddenfounders.CustomViews.RobotoTextViewBold
+                android:text="Timeline Photos"
+                android:id="@+id/album_title"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

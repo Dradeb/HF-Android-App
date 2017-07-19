@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "762536945629",
+    "firebase_url": "https://hiddenfounders-7e0ee.firebaseio.com",
+    "project_id": "hiddenfounders-7e0ee",
+    "storage_bucket": "hiddenfounders-7e0ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762536945629:android:afed2919ca9720eb",
+        "android_client_info": {
+          "package_name": "ma.dradeb.hiddenfounders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762536945629-65gcr6fvlqvg6vea1ronig2knorh8if5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQilDKXMqDxiOyDTtDTxDFDq9BjHXMFGo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
