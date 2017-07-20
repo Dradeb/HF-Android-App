@@ -144,8 +144,8 @@ public class PhotosActivity extends AppCompatActivity {
 
 
         //Sign in to firebase
-        signIn("youness.dradeb@gmail.com","Dradeb96");
-//        signInAnymously();
+
+       signInAnymously();
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
