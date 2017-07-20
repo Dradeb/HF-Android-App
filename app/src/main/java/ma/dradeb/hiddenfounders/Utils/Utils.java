@@ -27,17 +27,17 @@ public class Utils extends AppCompatActivity {
         fbDate = fbDate.substring(0,fbDate.indexOf("T"));
 
         System.out.println(""+fbDate);
-        SimpleDateFormat format2 = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = new Date();
-        try {
-            date = format1.parse(fbDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-        return  format2.format(date);
+//        SimpleDateFormat format2 = new SimpleDateFormat("dd/MM/yyyy");
+//        SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = new Date();
+//        try {
+//            date = format1.parse(fbDate);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        } catch (java.text.ParseException e) {
+//            e.printStackTrace();
+//        }
+        return  fbDate;
     }
 
     public static boolean isOnline(Context ctx)

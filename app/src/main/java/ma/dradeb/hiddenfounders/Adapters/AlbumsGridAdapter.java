@@ -2,9 +2,13 @@ package ma.dradeb.hiddenfounders.Adapters;
 
 import android.content.Context;
 import android.net.Uri;
+import android.support.v7.widget.CardView;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -60,12 +64,25 @@ public class AlbumsGridAdapter extends BaseAdapter {
         RobotoTextViewThin date ;
         ImageView cover;
 
+        CardView itemContainer ;
+
+
 
         View v = LayoutInflater.from(context).inflate(R.layout.album_item,null,false);
 
         title = (RobotoTextViewBold) v.findViewById(R.id.album_title);
         date = (RobotoTextViewThin)v.findViewById(R.id.album_date) ;
         cover = (ImageView)v.findViewById(R.id.album_cover);
+        itemContainer= (CardView)v.findViewById(R.id.item_container);
+
+        WindowManager wm = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics m = new DisplayMetrics();
+        display.getMetrics(m);
+        System.out.println(" DISPLAAAY "+m.widthPixels);
+
+        itemContainer.getLayoutParams().width = m.widthPixels/2;
+        itemContainer.getLayoutParams().height = m.widthPixels/2;
 
 
         title.setText(albums.get(i).getName());

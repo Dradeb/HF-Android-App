@@ -96,7 +96,7 @@ public class AlbumsActivity extends AppCompatActivity {
 
 
         //Setting up permissions
-        LoginManager.getInstance().logInWithReadPermissions(AlbumsActivity.this, Arrays.asList("user_photos"));
+        LoginManager.getInstance().logInWithReadPermissions(AlbumsActivity.this, Arrays.asList("user_photos","user_likes"));
         // A request to get Albums Data
         GraphRequest requestAlbums = new GraphRequest(AccessToken.getCurrentAccessToken(),"/me/albums?fields=count,id,created_time,name,picture",null, HttpMethod.GET, new GraphRequest.Callback(){
             @Override
@@ -125,6 +125,7 @@ public class AlbumsActivity extends AppCompatActivity {
 
                         albumsList.add(album);
                     }
+                    System.out.println(" ALBUUUMS "+albumsList.toString());
                     System.out.println("Size"+albumsList.size());
                     adapter = new AlbumsGridAdapter(getApplicationContext(),albumsList);
                     albumsGrid.setAdapter(adapter);
